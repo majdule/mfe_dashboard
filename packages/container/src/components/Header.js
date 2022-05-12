@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Header({ isSignedIn, onSignOut }) {
   const classes = useStyles();
 
+  // Communication between microfrontends via callbacks
   const onClick = () => {
     if (isSignedIn && onSignOut) {
       onSignOut();

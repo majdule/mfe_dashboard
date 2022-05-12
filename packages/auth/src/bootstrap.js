@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createMemoryHistory, createBrowserHistory } from 'history';
 import App from './App';
 
+// Exporting as a js function in order to remain frameworks agnostic
 const mount = (el, { onSignIn, onNavigate, defaultHistory, initialPath }) => {
   const history =
     defaultHistory ||
@@ -33,4 +34,5 @@ if (process.env.NODE_ENV === 'development') {
     mount(devRoot, { defaultHistory: createBrowserHistory() });
   }
 }
+
 export { mount };

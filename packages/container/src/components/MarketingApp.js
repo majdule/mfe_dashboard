@@ -1,3 +1,6 @@
+// For example this component would be provided
+// by us in the documentation and imported on
+// the MeasureOn side
 import { mount } from 'marketing/MarketingApp';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';

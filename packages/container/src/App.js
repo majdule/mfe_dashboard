@@ -5,6 +5,7 @@ import { StylesProvider, createGenerateClassName } from '@material-ui/core';
 import Header from './components/Header';
 import Progress from './components/Progress';
 
+// Importing components that are created on the MEAS side
 const AuthLazy = lazy(() => import('./components/AuthApp'));
 const MarketingLazy = lazy(() => import('./components/MarketingApp'));
 
@@ -21,6 +22,8 @@ export default () => {
           <Header onSignOut={() => setIsSignedIn(false)} isSignedIn={isSignedIn} />
           <Suspense fallback={<Progress />}>
             <Switch>
+              {/* Job of a container app (ex. MEAS) would be to select which
+              microfrontend would be displayed on a certain routes */}
               <Route path="/auth">
                 <AuthLazy onSignIn={() => setIsSignedIn(true)} />
               </Route>
