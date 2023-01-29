@@ -11,7 +11,7 @@ const generateClassName = createGenerateClassName({
 
 export default ({ history, onSignIn }) => {
   return (
-    <div>
+    <div style={{ border: '2px dashed #40e67c' }}>
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
