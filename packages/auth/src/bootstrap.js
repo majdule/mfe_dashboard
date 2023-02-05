@@ -4,6 +4,7 @@ import { createMemoryHistory, createBrowserHistory } from 'history';
 import App from './App';
 
 // Exporting as a js function in order to remain frameworks agnostic
+// Mount function takes in the refference of an html element and then display some content inside it
 const mount = (el, { onSignIn, onNavigate, defaultHistory, initialPath }) => {
   const history =
     defaultHistory ||
