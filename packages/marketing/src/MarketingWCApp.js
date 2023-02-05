@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './App';
+import App from './App';
 
 class MarketingWCApp extends HTMLElement {
   constructor() {
@@ -12,3 +12,4 @@ class MarketingWCApp extends HTMLElement {
 }
 
 customElements.define('marketing-app', MarketingWCApp);
+
